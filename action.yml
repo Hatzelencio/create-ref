@@ -1,0 +1,24 @@
+name: 'Create Git Ref'
+description: 'Create a git ref through github cli'
+author: 'Hatzel Renteria'
+inputs:
+  refs:
+    description: 'Name of the new ref. It's possible send a string separated by comma to create a multiple refs'
+    required: true
+  sha:
+    description: 'SHA base to create a ref. Default env variable is GITHUB_SHA'
+    required: false
+    default: ''
+  repository:
+    description: 'Owner and Repository name. Default env variable is GITHUB_REPOSITORY'
+    required: false
+    default: ''
+  fail-if-ref-exists:
+    description: 'Force to throw an error if ref is already on the remote'
+    required: false
+    default: 'IGNORE' # IGNORE, FORCE
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
