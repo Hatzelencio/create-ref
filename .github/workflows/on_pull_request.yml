@@ -19,8 +19,10 @@ jobs:
         with:
           fetch-depth: 0
       - name: Ensure if exists version
+        shell: bash
         run: |
-          sh bin/ensure_version.sh
+          chmod +x bin/ensure_version.sh
+          bash bin/ensure_version.sh
   test:
     needs: [lint, version]
     strategy:
