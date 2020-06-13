@@ -1,6 +1,6 @@
 ## Create Ref
 
-> Version: v0.0.2
+> Version: v0.0.3
 
 ------
 
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create a ref
-        uses: Hatzelencio/create-ref@v0.0.2
+        uses: Hatzelencio/create-ref@v0.0.3
         with:
           refs: "tags/my-new-ref" # or refs: "heads/my-new-branch"
         env:
@@ -28,7 +28,7 @@ If you need specify the sha base, you can override the `sha` variable. Like the 
 ```yaml
 steps:
   - name: Create a ref
-    uses: Hatzelencio/create-ref@v0.0.2
+    uses: Hatzelencio/create-ref@v0.0.3
     with:
       refs: "heads/my-branch,tags/my-new-tag"
       sha: 8bbd7620d10bc2ac991db3d78cbcf2b868f76902
@@ -41,7 +41,7 @@ If you prefer, it's possible return an `exit code 1` if you set the variable `fa
 ```yaml
 steps:
   - name: Create a ref
-    uses: Hatzelencio/create-ref@v0.0.2
+    uses: Hatzelencio/create-ref@v0.0.3
     with:
       refs: "heads/branch-red-already-exists"
       fail-if-ref-exists: FORCE
