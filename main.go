@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/hatzelencio/crete-ref/remote"
+	"github.com/hatzelencio/create-ref/remote"
 	"log"
 )
 

@@ -3,7 +3,7 @@ description: 'Create a git ref through github cli'
 author: 'Hatzel Renteria'
 inputs:
   refs:
-    description: 'Name of the new ref. It's possible send a string separated by comma to create a multiple refs'
+    description: 'Name of the new ref. Its possible send a string separated by comma to create a multiple refs'
     required: true
   sha:
     description: 'SHA base to create a ref. Default env variable is GITHUB_SHA'
@@ -20,5 +20,3 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}

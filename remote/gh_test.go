@@ -3,7 +3,7 @@ package remote
 import (
 	"bytes"
 	"github.com/google/go-github/v32/github"
-	"github.com/hatzelencio/crete-ref/utils/mocks"
+	"github.com/hatzelencio/create-ref/utils/mocks"
 	"golang.org/x/net/context"
 	"log"
 	"net/http"
